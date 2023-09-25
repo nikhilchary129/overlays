@@ -1,0 +1,43 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin</title>
+</head>
+<body>
+    <h1>hey admin</h1>
+    <div class="addstock">
+        <h1>to add stock</h1>
+        <form action="">
+
+            <input type="text" placeholder="enter the code">
+
+        </form>
+    </div>
+    
+    <div class="newproduct">
+        <h1>add new product</h1>
+        <form action="/admin/newproduct" method="post">
+            <input type="text" name="code" required placeholder="enter the code">
+            <input type="text" name="nam" required placeholder="enter the name">
+            <input type="text" name="img1" required placeholder="url for img1">
+            <input type="text" name="img2" required placeholder="url for img2">
+            <input type="text" name="img3" required placeholder="url for img3">
+            <input type="text" name="type" required placeholder="type">
+            <input type="text" name="price" required placeholder="price">
+            <input type="text" name="xs"  required  placeholder="xs-stock">
+            <input type="text" name="s" required placeholder="s-stock">
+            <input type="text" name="m" required placeholder="m-stock">
+            <input type="text" name="l" required placeholder="l-stock">
+            <input type="text" name="xl" required placeholder="xl-stock">
+           
+
+            <button type="submit">submit</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -4,7 +4,7 @@ const data = require("./models/mongo.js")
 const mongodb = require('mongodb');
 const bodyPaser = require("body-parser")
 const mongoose = require("mongoose");
-const db = "mongodb://localhost:27017/books"
+const db = "mongodb+srv://nikhilchary129:yashnikhil1297@cluster0.j8robyz.mongodb.net/ "
 
 const path = require("path");
 const { render } = require("ejs");
@@ -13,15 +13,7 @@ const { resolveSoa } = require("dns");
 const app = express()
 app.set("view engine", "ejs")
 app.use(express.static(path.join(__dirname, "public")));
-app.get('/',(req,res)=>{
-    res.render('home.ejs')
-})
-app.get('/login',(req,res)=>{
-    res.render('login')
-})
-app.get('/register',(req,res)=>{
-    res.render('register')
-})
+
 
 app.use(express.urlencoded({ extended: true }));
 

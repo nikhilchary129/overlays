@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product</title>
+    <link rel="stylesheet" href="/card.css">
+
+</head>
+
+<body>
+    <% locals.allproducts.forEach(element=> { %>
+
+        <div class="product">
+            <div class="productimg n<%=element.code%>">
+                <img src=<%=element.img1 %> alt="">
+
+            </div>
+            <style>
+                .n<%=element.code%> :hover {
+                    content: url(<%=element.img2 %>);
+                    /* Add any other styling you want for the hover effect */
+                }
+            </style>
+            <div>
+                <%= element.nam %>
+                    Sale price
+                    ₹ <%= element.price %>.00
+            </div>
+            <div class="productbottom">
+                <% if (element.xs!=0) { %>
+                    <div class="sizebox">
+                        <a class="size">
+
+                            XS
+
+
+                        </a>
+                    </div>
+                    <% } %>
+                        <% if (element.s!=0) { %>
+                            <div class="sizebox">
+                                <a class="size">
+
+                                    S
+
+
+                                </a>
+                            </div>
+                            <% } %>
+                                <% if (element.m!=0) { %>
+                                    <div class="sizebox">
+                                        <a class="size">
+
+                                            m
+
+
+                                        </a>
+                                    </div>
+                                    <% } %>
+                                        <% if (element.l!=0) { %>
+                                            <div class="sizebox">
+                                                <a class="size">
+
+                                                    l
+
+
+                                                </a>
+                                            </div>
+                                            <% } %>
+                                                <% if (element.xl!=0) { %>
+                                                    <div class="sizebox">
+                                                        <a class="size">
+
+                                                            xl
+
+
+                                                        </a>
+                                                    </div>
+                                                    <% } %>
+
+
+
+            </div>
+        </div>
+
+
+
+
+        <% }); %>
+            <div class="product">
+                <div class="productimg">
+                    <img src="https://overlays.co/cdn/shop/files/20230805-DSC03425.jpg?v=1692105105&width=400" alt="">
+                </div>
+                <div>
+                    Ultra Soft Oversized Fearless T-shirt
+                    Sale price
+                    ₹ 999.00
+                </div>
+                <div class="productbottom">
+                    <div class="sizebox">
+                        <a class="size">
+
+                            XS
+
+
+                        </a>
+                    </div>
+
+                    <div class="sizebox">
+                        <a class="size">
+
+                            S
+
+
+                        </a>
+                    </div>
+
+                    <div class="sizebox">
+                        <a class="size">
+
+                            M
+
+
+                        </a>
+                    </div>
+
+                    <div class="sizebox">
+                        <a class="size">
+
+                            L
+                        </a>
+                    </div>
+
+                    <div class="sizebox">
+                        <a class="size">
+
+                            XL
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+</body>
+
+</html>
