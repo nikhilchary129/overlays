@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/login.css"> <!-- You can link to a separate stylesheet for signup styles if needed -->
+</head>
+
+<body>
+    <div id="container">
+
+        <div>
+            <h1>Sign Up</h1>
+            <p>Create your account:</p>
+        </div>
+
+        <form method="post" action="/account/signup" accept-charset="UTF-8" name="signup">
+            <input type="hidden" name="form_type" value="customer_signup">
+            <input type="hidden" name="utf8" value="✓">
+            <div>
+                <input type="email" placeholder="Email" class="input" autocomplete="email" name="customer[email]"
+                    required="required">
+            </div>
+
+            <div>
+                <input type="password" placeholder="Password" class="input" name="customer[password]"
+                    required="required" autocomplete="new-password"> <!-- Updated placeholder and autocomplete attribute -->
+
+                <br>
+                <!-- Updated button text and class -->
+                </div>
+
+            <!-- Updated button text and class -->
+            <button type="submit" class="btn">
+                <span>Sign Up</span>
+                <span hidden="">
+                    <div>
+                        <svg focusable="false" width="24" height="24" viewBox="25 25 50 50">
+                            <circle cx="50" cy="50" r="20" fill="none" stroke="currentColor" stroke-width="5"></circle>
+                        </svg>
+                    </div>
+                </span>
+            </button>
+            <br>
+            <!-- Updated text -->
+            <span>Already have an account? <a href="/account/login">Log In</a></span>
+        </form>
+    </div>
+</body>
+
+</html>

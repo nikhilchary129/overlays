@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="/login.css">
+  
+</head>
+
+<body>
+   
+    <div id="container">
+
+        <div>
+            <h1>Login</h1>
+            <p>Please enter your e-mail and password:</p>
+        </div>
+
+
+
+        <form method="post" action="/account/login" accept-charset="UTF-8" name="login">
+            <input type="hidden" name="form_type" value="customer_login">
+            <input type="hidden" name="utf8" value="✓">
+            <div>
+                <input type="email" placeholder="email" class="input" autocomplete="email" name="customer[email]"
+                    required="required">
+                
+            </div>
+
+            <div>
+                <input type="password" placeholder="password" class="input" name="customer[password]"
+                    required="required" autocomplete="current-password">
+                
+<br>
+                <button type="button " class="somebtn" data-action="switch-login-form">Forgot password?</button>
+            </div>
+
+            <button type="submit" class="btn">
+                <span>Login</span>
+                <span hidden="">
+                    <div>
+                        <svg focusable="false" width="24" height="24" viewBox="25 25 50 50">
+                            <circle cx="50" cy="50" r="20" fill="none" stroke="currentColor" stroke-width="5"></circle>
+                        </svg>
+                    </div>
+                </span>
+            </button>
+            <br>
+            <span>New customer?<a href="/account/register">Create an account</a></span>
+        </form>
+
+
+    </div>
+
+</body>
+
+</html>

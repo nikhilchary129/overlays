@@ -8,12 +8,19 @@ const db = "mongodb://localhost:27017/books"
 
 const path = require("path");
 const { render } = require("ejs");
-const router = require("./routes/routes.js")
+const router = require("./routes/routes.js");
+const { resolveSoa } = require("dns");
 const app = express()
 app.set("view engine", "ejs")
 app.use(express.static(path.join(__dirname, "public")));
 app.get('/',(req,res)=>{
     res.render('home.ejs')
+})
+app.get('/login',(req,res)=>{
+    res.render('login')
+})
+app.get('/register',(req,res)=>{
+    res.render('register')
 })
 
 app.use(express.urlencoded({ extended: true }));
