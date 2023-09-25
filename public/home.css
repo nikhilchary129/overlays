@@ -1,0 +1,462 @@
+
+@font-face {
+font-family: Futura;
+font-weight: 500;
+font-style: normal;
+font-display: swap;
+src: url("//overlays.co/cdn/fonts/futura/futura_o5.2374ce1c635b408a1f07994a3de4a936fc50f767.woff2?h1=b3ZlcmxheXNjbG90aGluZy5jb20&h2=b3ZlcmxheXMtY2xvdGhpbmcuYWNjb3VudC5teXNob3BpZnkuY29t&h3=b3ZlcmxheXMuY28&h4=b3ZlcmxheXMuY28uaW4&hmac=110063bd28e7a7f666354cee02d4bb32f81410090888964f37c1e10d610e1936") format("woff2"),
+   url("//overlays.co/cdn/fonts/futura/futura_o5.1bf4df2c089a877c3ba2d33a9d4c7908742bfc89.woff?h1=b3ZlcmxheXNjbG90aGluZy5jb20&h2=b3ZlcmxheXMtY2xvdGhpbmcuYWNjb3VudC5teXNob3BpZnkuY29t&h3=b3ZlcmxheXMuY28&h4=b3ZlcmxheXMuY28uaW4&hmac=4573f07fe5427a098afd8da1775689f863f40c36b14c248793b3d5e4baca7075") format("woff");
+}
+*{
+    font-family: "Futura", sans-serif;
+}
+nav {
+    position: relative;
+  
+    /* Set the initial background color */
+    background-color: transparent; /* Change this to your initial background color */
+    transition: background-color 0.3s; /* Add a transition for smooth color change */
+    display: flex;
+    justify-content: space-between;
+   width: 4fr;
+    margin-bottom: 10px;
+  padding: 25px;
+    align-items: center;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles for the nav on hover */
+ nav:hover {
+    background-color: rgba(0, 0, 0, 0.514); /* Change this to the desired hover background color */
+ }
+
+.logo {
+    text-size-adjust: 100%;
+    font-style: var(--text-font-style);
+    line-height: 1.7333333333;
+    --heading-color: 26, 26, 26;
+    --text-color: 26, 26, 26;
+    --background: 255, 255, 255;
+    --secondary-background: 229, 229, 229;
+    --border-color: 221, 221, 221;
+    --border-color-darker: 163, 163, 163;
+    --success-color: 46, 158, 123;
+    --success-background: 213, 236, 229;
+    --error-color: 222, 42, 42;
+    --error-background: 253, 240, 240;
+    --primary-button-background: 0, 0, 0;
+    --primary-button-text-color: 255, 255, 255;
+    --secondary-button-background: 229, 229, 229;
+    --secondary-button-text-color: 0, 0, 0;
+    --product-star-rating: 228, 158, 15;
+    --product-on-sale-accent: 255, 112, 0;
+    --product-sold-out-accent: 111, 113, 155;
+    --product-custom-label-background: 255, 112, 0;
+    --product-custom-label-text-color: 255, 255, 255;
+    --product-custom-label-2-background: 243, 229, 182;
+    --product-custom-label-2-text-color: 0, 0, 0;
+    --product-low-stock-text-color: 222, 42, 42;
+    --product-in-stock-text-color: 46, 158, 123;
+    --root-heading-color: 26, 26, 26;
+    --root-text-color: 26, 26, 26;
+    --root-background: 255, 255, 255;
+    --root-border-color: 221, 221, 221;
+    --root-primary-button-background: 0, 0, 0;
+    --root-primary-button-text-color: 255, 255, 255;
+    --base-font-size: 15px;
+    --heading-font-family: Galano Grotesque;
+    --heading-font-weight: 500;
+    --heading-font-style: normal;
+    --heading-text-transform: normal;
+    --text-font-family: Galano Grotesque;
+    --text-font-weight: 500;
+    --text-font-style: normal;
+    --text-font-bold-weight: 600;
+    --heading-xxsmall-font-size: 11px;
+    --button-border-radius: 4px;
+    --block-border-radius: 8px;
+    --block-border-radius-reduced: 4px;
+    --color-swatch-border-radius: 100%;
+    --form-input-gap: 16px;
+    --product-list-block-spacing: 32px;
+    --play-button-background: 255, 255, 255;
+    --play-button-arrow: 26, 26, 26;
+    --transform-logical-flip: 1;
+    --transform-origin-start: left;
+    --transform-origin-end: right;
+    --zoom-cursor-svg-url: url(//overlays.co/cdn/shop/t/51/assets/zoom-cursor.svg?v=1201279167966953441691777465);
+    --arrow-right-svg-url: url(//overlays.co/cdn/shop/t/51/assets/arrow-right.svg?v=88946934944805437251691777465);
+    --arrow-left-svg-url: url(//overlays.co/cdn/shop/t/51/assets/arrow-left.svg?v=112457598847827652331691777465);
+    --container-max-width: 1600px;
+    --container-max-width-minus-gutters: calc(var(--container-max-width) - (var(--container-gutter)) * 2);
+    --container-outer-width: max(calc((100vw - var(--container-max-width-minus-gutters)) / 2), var(--container-gutter));
+    --container-inner-width: calc(100vw - var(--container-outer-width) * 2);
+    --grid-gap: 24px;
+    --grid-column-width: calc((100vw - var(--container-outer-width) * 2 - var(--grid-gap) * (var(--grid-column-count) - 1)) / var(--grid-column-count));
+    --payment-terms-background-color: #ffffff;
+    --container-gutter: 40px;
+    --grid-column-count: 20;
+    --vertical-breather: 40px;
+    --vertical-breather-tight: 40px;
+    --heading-xsmall-font-size: 12px;
+    --heading-small-font-size: 13px;
+    --heading-large-font-size: 52px;
+    --heading-h1-font-size: 48px;
+    --heading-h2-font-size: 38px;
+    --heading-h3-font-size: 32px;
+    --heading-h4-font-size: 24px;
+    --heading-h5-font-size: 20px;
+    --heading-h6-font-size: 18px;
+    --form-input-field-height: 52px;
+    --form-submit-margin: 32px;
+    --button-height: 52px;
+    --button-small-height: 44px;
+    --animate-duration: 1s;
+    --animate-delay: 1s;
+    --animate-repeat: 1;
+    --swym-remind-cta-bg-color: #00a65a;
+    --swym-remind-cta-text-color: white;
+    --swym-remind-cta-bg-color-v2: #000000;
+    --swym-remind-cta-text-color-v2: white;
+    --swym-subscribe-success-bg-color: #AEE9D1;
+    --swym-subscribe-success-text-color: #202223;
+    --swym-recently-viewed-pointer-pos: 92%;
+    --enable-sticky-announcement-bar: 0;
+    --enable-sticky-header: 0;
+    --enable-transparent-header: 1;
+    --loading-bar-background: 0, 0, 0;
+    --swiper-theme-color: #007aff;
+    --swiper-navigation-size: 44px;
+    --window-height: 657px;
+    --header-height: 85px;
+    --header-height-without-bottom-nav: 85px;
+    --occ-theme-color: #000000;
+    font-family: Galano Grotesque Alt;
+    --reduce-header-padding: 0;
+    --header-background: transparent;
+    --header-text-color: 255, 255, 255;
+    --header-border-color: 255, 255, 255, 0.15;
+    --header-transparent-bubble-text-color: 0, 0, 0;
+    --container-outer-margin: 0px;
+
+
+    color: inherit;
+    aspect-ratio: auto 1279 / 1384;
+    box-sizing: border-box !important;
+    -webkit-font-smoothing: antialiased;
+    border-style: none;
+    /* vertical-align: top; */
+    display: block;
+    transition: opacity .2s ease-in-out;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    /* height: 100%; */
+    object-fit: contain;
+    object-position: center;
+    margin-top: 20px;
+   margin-left:-16% ;
+    opacity: 1;
+    max-width: 75px;
+    text-align: center;
+}
+
+
+.icon {
+    fill: azure;
+    padding: 5px;
+    padding-top: 10px;
+}
+
+.input {
+    text-size-adjust: 100%;
+    --heading-color: 26, 26, 26;
+    --text-color: 26, 26, 26;
+    --background: 255, 255, 255;
+    --secondary-background: 229, 229, 229;
+    --border-color: 221, 221, 221;
+    --border-color-darker: 163, 163, 163;
+    --success-color: 46, 158, 123;
+    --success-background: 213, 236, 229;
+    --error-color: 222, 42, 42;
+    --error-background: 253, 240, 240;
+    --primary-button-background: 0, 0, 0;
+    --primary-button-text-color: 255, 255, 255;
+    --secondary-button-background: 229, 229, 229;
+    --secondary-button-text-color: 0, 0, 0;
+    --product-star-rating: 228, 158, 15;
+    --product-on-sale-accent: 255, 112, 0;
+    --product-sold-out-accent: 111, 113, 155;
+    --product-custom-label-background: 255, 112, 0;
+    --product-custom-label-text-color: 255, 255, 255;
+    --product-custom-label-2-background: 243, 229, 182;
+    --product-custom-label-2-text-color: 0, 0, 0;
+    --product-low-stock-text-color: 222, 42, 42;
+    --product-in-stock-text-color: 46, 158, 123;
+    --root-heading-color: 26, 26, 26;
+    --root-text-color: 26, 26, 26;
+    --root-background: 255, 255, 255;
+    --root-border-color: 221, 221, 221;
+    --root-primary-button-background: 0, 0, 0;
+    --root-primary-button-text-color: 255, 255, 255;
+    --base-font-size: 15px;
+    --heading-font-family: Galano Grotesque;
+    --heading-font-weight: 500;
+    --heading-font-style: normal;
+    --heading-text-transform: normal;
+    --text-font-family: Galano Grotesque;
+    --text-font-weight: 500;
+    --text-font-style: normal;
+    --text-font-bold-weight: 600;
+    --heading-xxsmall-font-size: 11px;
+    --button-border-radius: 4px;
+    --block-border-radius: 8px;
+    --block-border-radius-reduced: 4px;
+    --color-swatch-border-radius: 100%;
+    --form-input-gap: 16px;
+    --product-list-block-spacing: 32px;
+    --play-button-background: 255, 255, 255;
+    --play-button-arrow: 26, 26, 26;
+    --transform-logical-flip: 1;
+    --transform-origin-start: left;
+    --transform-origin-end: right;
+    --zoom-cursor-svg-url: url(//overlays.co/cdn/shop/t/51/assets/zoom-cursor.svg?v=1201279167966953441691777465);
+    --arrow-right-svg-url: url(//overlays.co/cdn/shop/t/51/assets/arrow-right.svg?v=88946934944805437251691777465);
+    --arrow-left-svg-url: url(//overlays.co/cdn/shop/t/51/assets/arrow-left.svg?v=112457598847827652331691777465);
+    --container-max-width: 1600px;
+    --container-max-width-minus-gutters: calc(var(--container-max-width) - (var(--container-gutter)) * 2);
+    --container-outer-width: max(calc((100vw - var(--container-max-width-minus-gutters)) / 2), var(--container-gutter));
+    --container-inner-width: calc(100vw - var(--container-outer-width) * 2);
+    --grid-gap: 24px;
+    --grid-column-width: calc((100vw - var(--container-outer-width) * 2 - var(--grid-gap) * (var(--grid-column-count) - 1)) / var(--grid-column-count));
+    --payment-terms-background-color: #ffffff;
+    --container-gutter: 40px;
+    --grid-column-count: 20;
+    --vertical-breather: 40px;
+    --vertical-breather-tight: 40px;
+    --heading-xsmall-font-size: 12px;
+    --heading-small-font-size: 13px;
+    --heading-large-font-size: 52px;
+    --heading-h1-font-size: 48px;
+    --heading-h2-font-size: 38px;
+    --heading-h3-font-size: 32px;
+    --heading-h4-font-size: 24px;
+    --heading-h5-font-size: 20px;
+    --heading-h6-font-size: 18px;
+    --form-input-field-height: 52px;
+    --form-submit-margin: 32px;
+    --button-height: 52px;
+    --button-small-height: 44px;
+    --animate-duration: 1s;
+    --animate-delay: 1s;
+    --animate-repeat: 1;
+    --swym-remind-cta-bg-color: #00a65a;
+    --swym-remind-cta-text-color: white;
+    --swym-remind-cta-bg-color-v2: #000000;
+    --swym-remind-cta-text-color-v2: white;
+    --swym-subscribe-success-bg-color: #AEE9D1;
+    --swym-subscribe-success-text-color: #202223;
+    --swym-recently-viewed-pointer-pos: 92%;
+    --enable-sticky-announcement-bar: 0;
+    --enable-sticky-header: 0;
+    --enable-transparent-header: 1;
+    --loading-bar-background: 0, 0, 0;
+    --swiper-theme-color: #007aff;
+    --swiper-navigation-size: 44px;
+    --window-height: 657px;
+    --header-height: 85px;
+    --header-height-without-bottom-nav: 85px;
+    --occ-theme-color: #000000;
+    --reduce-header-padding: 0;
+    --header-background: transparent;
+    --header-text-color: 255, 255, 255;
+    --header-border-color: 255, 255, 255, 0.15;
+    --header-transparent-bubble-text-color: 0, 0, 0;
+    --container-outer-margin: 0px;
+    box-sizing: border-box !important;
+    -webkit-font-smoothing: antialiased;
+    color: white;
+    font: inherit;
+    
+    margin: 0;
+    text-align: inherit;
+    padding: 0;
+    min-width: 300px;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    appearance: none;
+    margin-left: 12px;
+    margin-bottom: 10px;
+}
+#searchguide{
+    
+  display: flex;
+  align-content: space-evenly;
+    color: white;
+    text-align: center;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   
+
+}
+
+.circle{
+    width: 180px;
+    height: 180px;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+.video {
+    position: relative;
+    z-index: -3;
+    max-width: 100%;
+    border-style: none;
+
+    width: 99%;
+
+    height: auto;
+    display: block;
+    margin: 0;
+    bottom: 10px;
+    margin-top: -200px;
+}
+#pics{
+    width: 100%;
+    height: auto;
+}
+.pic{
+    text-size-adjust: 100%;
+    font-weight: var(--text-font-weight);
+    font-style: var(--text-font-style);
+    font-size: calc(var(--base-font-size) - 1px);
+    line-height: 1.7142857143;
+    --background: 255, 255, 255;
+    --secondary-background: 229, 229, 229;
+    --border-color: 221, 221, 221;
+    --border-color-darker: 163, 163, 163;
+    --success-color: 46, 158, 123;
+    --success-background: 213, 236, 229;
+    --error-color: 222, 42, 42;
+    --error-background: 253, 240, 240;
+    --secondary-button-background: 229, 229, 229;
+    --secondary-button-text-color: 0, 0, 0;
+    --product-star-rating: 228, 158, 15;
+    --product-on-sale-accent: 255, 112, 0;
+    --product-sold-out-accent: 111, 113, 155;
+    --product-custom-label-background: 255, 112, 0;
+    --product-custom-label-text-color: 255, 255, 255;
+    --product-custom-label-2-background: 243, 229, 182;
+    --product-custom-label-2-text-color: 0, 0, 0;
+    --product-low-stock-text-color: 222, 42, 42;
+    --product-in-stock-text-color: 46, 158, 123;
+    --root-heading-color: 26, 26, 26;
+    --root-text-color: 26, 26, 26;
+    --root-background: 255, 255, 255;
+    --root-border-color: 221, 221, 221;
+    --root-primary-button-background: 0, 0, 0;
+    --root-primary-button-text-color: 255, 255, 255;
+    --base-font-size: 15px;
+    --heading-font-family: Galano Grotesque;
+    --heading-font-weight: 500;
+    --heading-font-style: normal;
+    --heading-text-transform: normal;
+    --text-font-family: Galano Grotesque;
+    --text-font-weight: 500;
+    --text-font-style: normal;
+    --text-font-bold-weight: 600;
+    --heading-xxsmall-font-size: 11px;
+    --heading-xsmall-font-size: 11px;
+    --heading-small-font-size: 12px;
+    --heading-large-font-size: 36px;
+    --heading-h1-font-size: 36px;
+    --heading-h2-font-size: 30px;
+    --heading-h3-font-size: 26px;
+    --heading-h4-font-size: 24px;
+    --heading-h5-font-size: 20px;
+    --heading-h6-font-size: 16px;
+    --button-border-radius: 4px;
+    --block-border-radius: 8px;
+    --block-border-radius-reduced: 4px;
+    --color-swatch-border-radius: 100%;
+    --button-height: 48px;
+    --button-small-height: 40px;
+    --form-input-field-height: 48px;
+    --form-input-gap: 16px;
+    --form-submit-margin: 24px;
+    --product-list-block-spacing: 32px;
+    --play-button-background: 255, 255, 255;
+    --play-button-arrow: 26, 26, 26;
+    --transform-logical-flip: 1;
+    --transform-origin-start: left;
+    --transform-origin-end: right;
+    --zoom-cursor-svg-url: url(//overlays.co/cdn/shop/t/51/assets/zoom-cursor.svg?v=1201279167966953441691777465);
+    --arrow-right-svg-url: url(//overlays.co/cdn/shop/t/51/assets/arrow-right.svg?v=88946934944805437251691777465);
+    --arrow-left-svg-url: url(//overlays.co/cdn/shop/t/51/assets/arrow-left.svg?v=112457598847827652331691777465);
+    --container-max-width: 1600px;
+    --container-gutter: 24px;
+    --container-max-width-minus-gutters: calc(var(--container-max-width) - (var(--container-gutter)) * 2);
+    --container-outer-width: max(calc((100vw - var(--container-max-width-minus-gutters)) / 2), var(--container-gutter));
+    --container-outer-margin: var(--container-outer-width);
+    --container-inner-width: calc(100vw - var(--container-outer-width) * 2);
+    --grid-column-count: 10;
+    --grid-gap: 24px;
+    --grid-column-width: calc((100vw - var(--container-outer-width) * 2 - var(--grid-gap) * (var(--grid-column-count) - 1)) / var(--grid-column-count));
+    --vertical-breather: 28px;
+    --vertical-breather-tight: 28px;
+    --payment-terms-background-color: #ffffff;
+    --animate-duration: 1s;
+    --animate-delay: 1s;
+    --animate-repeat: 1;
+    --swym-remind-cta-bg-color: #00a65a;
+    --swym-remind-cta-text-color: white;
+    --swym-remind-cta-bg-color-v2: #000000;
+    --swym-remind-cta-text-color-v2: white;
+    --swym-subscribe-success-bg-color: #AEE9D1;
+    --swym-subscribe-success-text-color: #202223;
+    --swym-recently-viewed-pointer-pos: 92%;
+    --enable-sticky-announcement-bar: 0;
+    --enable-sticky-header: 0;
+    --enable-transparent-header: 1;
+    --loading-bar-background: 0, 0, 0;
+    --swiper-theme-color: #007aff;
+    --swiper-navigation-size: 44px;
+    --window-height: 640px;
+    --header-height: 65px;
+    --header-height-without-bottom-nav: 65px;
+    --occ-theme-color: #000000;
+    color: rgb(var(--text-color));
+    --progress-bar-color: 255, 255, 255;
+    --section-autoplay-duration: 5s;
+    --slideshow-min-height: 0;
+    --section-animation-play-state: running;
+    --heading-color: 255, 255, 255;
+    --text-color: 255, 255, 255;
+    --primary-button-background: 255, 255, 255;
+    --primary-button-text-color: 0, 0, 0;
+    --section-blocks-alignment: flex-end;
+    --section-blocks-overlay-color: 0, 0, 0;
+    --section-blocks-overlay-opacity: 0.0;
+    --image-aspect-ratio: 2.0;
+    --mobile-image-aspect-ratio: 0.7142857142857143;
+    visibility: visible;
+    aspect-ratio: auto 3000 / 4200;
+    -webkit-user-drag: none;
+    box-sizing: border-box!important;
+    -webkit-font-smoothing: antialiased;
+    max-width: 100%;
+    border-style: none;
+    vertical-align: top;
+    
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    left: 0;
+    font-family: futura;
+    width: 100%;
+}
