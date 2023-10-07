@@ -6,143 +6,200 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>product</title>
     <link rel="stylesheet" href="/card.css">
+    <link rel="stylesheet" href="/allproduct.css">
+    <link rel="stylesheet" href="/home.css">
 
 </head>
 
 <body>
-    <% locals.allproducts.forEach(element=> { %>
+        <div class="block1" style="background-color: rgba(0, 0, 0, 0.671);" >
 
-        <div class="product">
-            <div class="productimg n<%=element.code%>">
-                <img src=<%=element.img1 %> alt="">
+        <nav>
+
+            <div class="leftnav">
+
+                <a href="/search" type="submit" is="toggle-link" class="icon" aria-controls="search-drawer"
+                    aria-expanded="false" aria-label="Search">
+                    <svg focusable="false" width="18" height="18" class="icon " viewBox="0 0 18 18">
+                        <path
+                            d="M12.336 12.336c2.634-2.635 2.682-6.859.106-9.435-2.576-2.576-6.8-2.528-9.435.106C.373 5.642.325 9.866 2.901 12.442c2.576 2.576 6.8 2.528 9.435-.106zm0 0L17 17"
+                            fill="none" stroke="white" stroke-width="2"></path>
+                    </svg>
+                </a>
+                <input class="input" is="predictive-search-input" type="text" name="q" autocomplete="off"
+                    autocorrect="off" aria-controls="search-drawer" aria-expanded="false" aria-label="Search"
+                    style="color: rgb(255, 255, 255);"  placeholder="What are you looking for?">
 
             </div>
-            <style>
-                .n<%=element.code%> :hover {
-                    content: url(<%=element.img2 %>);
-                    /* Add any other styling you want for the hover effect */
-                }
-            </style>
-            <div>
-                <%= element.nam %>
-                    Sale price
-                    ₹ <%= element.price %>.00
+
+            <div class="middlenav">
+                <div></div>
+                <img class="logo" width="40px" height="60px"
+                    src="//overlays.co/cdn/shop/files/logo_too_big_to_be_true_150x.png?v=1692091122" alt="">
+                <div></div>
             </div>
-            <div class="productbottom">
-                <% if (element.xs!=0) { %>
-                    <div class="sizebox">
-                        <a class="size">
+            <div class="rightnav">
+                <a href="/cart" is="toggle-link" aria-controls="mini-cart" aria-expanded="false" class="icon "
+                    aria-label="Cart" data-no-instant=""><svg focusable="false" width="20" height="18" class="icon "
+                        viewBox="0 0 20 18">
+                        <path d="M3 1h14l1 16H2L3 1z" fill="none" stroke="white" stroke-width="2"></path>
+                        <path d="M7 4v0a3 3 0 003 3v0a3 3 0 003-3v0" fill="none" stroke="white" stroke-width="2"></path>
+                    </svg>
 
-                            XS
+                </a>
+                <a href="/login" class="header__icon-wrapper tap-area hidden-phone " aria-label="Login"><svg
+                        focusable="false" width="18" height="17" class="icon icon--header-customer   "
+                        viewBox="0 0 18 17">
+                        <circle cx="9" cy="5" r="4" fill="none" stroke="white" stroke-width="2" stroke-linejoin="round">
+                        </circle>
+                        <path d="M1 17v0a4 4 0 014-4h8a4 4 0 014 4v0" fill="none" stroke="white" stroke-width="2">
+                        </path>
+                    </svg>
+                </a>
 
+            </div>
 
-                        </a>
-                    </div>
-                    <% } %>
-                        <% if (element.s!=0) { %>
-                            <div class="sizebox">
-                                <a class="size">
-
-                                    S
-
-
-                                </a>
-                            </div>
-                            <% } %>
-                                <% if (element.m!=0) { %>
-                                    <div class="sizebox">
-                                        <a class="size">
-
-                                            m
-
-
-                                        </a>
-                                    </div>
-                                    <% } %>
-                                        <% if (element.l!=0) { %>
-                                            <div class="sizebox">
-                                                <a class="size">
-
-                                                    l
-
-
-                                                </a>
-                                            </div>
-                                            <% } %>
-                                                <% if (element.xl!=0) { %>
-                                                    <div class="sizebox">
-                                                        <a class="size">
-
-                                                            xl
-
-
-                                                        </a>
-                                                    </div>
-                                                    <% } %>
-
-
+        </nav>
+    </div>
+    
+    <div id="sidebar">
+        <h1>filter</h1>
+        <div class="toogle">
+            <button class="tooglebtn">
+                <p>price</p>
+                <svg focusable="false" width="12" height="8" class="icon icon--chevron icon--inline  "
+                    viewBox="0 0 12 8">
+                    <path fill="none" d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2"></path>
+                </svg>
+            </button>
+            <div class="tooglecontent">
+                <input type="text" aria-label="From price" placeholder="max-price" min="0" max="1799" >
+                <p>to</p>
+                <input type="text" aria-label="To price" placeholder="max-price"  min="0" max="1799">
 
             </div>
         </div>
+        <div class="toogle">
+            <button class="tooglebtn">
+                <p>type</p>
+                <svg focusable="false" width="12" height="8" class="icon icon--chevron icon--inline  "
+                    viewBox="0 0 12 8">
+                    <path fill="none" d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2"></path>
+                </svg>
+            </button>
+            <div class="tooglecontent">
+                <div class="box">  <input type="checkbox" name="check" id=""><label for="check">  Apparel & Accessories </label></div>
+                <div class="box">  <input type="checkbox" name="check" id=""><label for="check">   Crop Top (12)</label></div>
+                <div class="box">  <input type="checkbox" name="check" id=""><label for="check">         Hoodies (5)
+                </label></div>
+                <div class="box">  <input type="checkbox" name="check" id=""><label for="check">  Joggers (4) </label></div>
+                <div class="box">  <input type="checkbox" name="check" id=""><label for="check">   Pants (5) </label></div>
+                <div class="box">  <input type="checkbox" name="check" id=""><label for="check">   Shirt (2) </label></div>
+                <div class="box">  <input type="checkbox" name="check" id=""><label for="check">    Sweatshirts (8) </label></div>
+                <div class="box">  <input type="checkbox" name="check" id=""><label for="check">     T-shirt (24)</label></div>
+            
+            </div>
+        </div>
+      
 
+       
+        
+        
+      
+        
+      
+        
+      
+        
+     
+        
+      
+    </div>
 
+    <div id="product-grid">
+        <% locals.allproducts.forEach(element=> { %>
+            <a href="/product/<%= element.id %>" target="_blank">
+            <div class="product" >
+                <div class="productimg n<%=element.code%>">
+                    <img src=<%=element.img1 %> alt="">
 
-
-        <% }); %>
-            <div class="product">
-                <div class="productimg">
-                    <img src="https://overlays.co/cdn/shop/files/20230805-DSC03425.jpg?v=1692105105&width=400" alt="">
                 </div>
+                <style>
+                    .n<%=element.code%> :hover {
+                        content: url(<%=element.img2 %>);
+                        /* Add any other styling you want for the hover effect */
+                        transition: transform 0.3s ease-in-out;
+                    }
+                </style>
                 <div>
-                    Ultra Soft Oversized Fearless T-shirt
-                    Sale price
-                    ₹ 999.00
+                    <%= element.nam %>
+                        Sale price
+                        ₹ <%= element.price %>.00
                 </div>
                 <div class="productbottom">
-                    <div class="sizebox">
-                        <a class="size">
+                    <% if (element.xs!=0) { %>
+                        <div class="sizebox">
+                            <a class="size">
 
-                            XS
-
-
-                        </a>
-                    </div>
-
-                    <div class="sizebox">
-                        <a class="size">
-
-                            S
+                                XS
 
 
-                        </a>
-                    </div>
+                            </a>
+                        </div>
+                        <% } %>
+                            <% if (element.s!=0) { %>
+                                <div class="sizebox">
+                                    <a class="size">
 
-                    <div class="sizebox">
-                        <a class="size">
-
-                            M
+                                        S
 
 
-                        </a>
-                    </div>
+                                    </a>
+                                </div>
+                                <% } %>
+                                    <% if (element.m!=0) { %>
+                                        <div class="sizebox">
+                                            <a class="size">
 
-                    <div class="sizebox">
-                        <a class="size">
+                                                m
 
-                            L
-                        </a>
-                    </div>
 
-                    <div class="sizebox">
-                        <a class="size">
+                                            </a>
+                                        </div>
+                                        <% } %>
+                                            <% if (element.l!=0) { %>
+                                                <div class="sizebox">
+                                                    <a class="size">
 
-                            XL
-                        </a>
-                    </div>
+                                                        l
+
+
+                                                    </a>
+                                                </div>
+                                                <% } %>
+                                                    <% if (element.xl!=0) { %>
+                                                        <div class="sizebox">
+                                                            <a class="size">
+
+                                                                xl
+
+
+                                                            </a>
+                                                        </div>
+                                                        <% } %>
+
 
 
                 </div>
             </div>
+        </a>
+
+
+
+            <% }); %>
+
+    </div>
+
 </body>
 
 </html>

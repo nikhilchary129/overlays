@@ -3,7 +3,7 @@ const mongoose= require("mongoose");
 const Schema=mongoose.Schema
 
 const userSchema= new Schema({
-    username:{
+    email:{
         type:String,
       
     },
@@ -11,10 +11,19 @@ const userSchema= new Schema({
         type:String,
       
     },
+    order:[{
+        productid: { type: mongoose.Schema.Types.ObjectId, ref: 'book' },
+        quantity: { type: Number, default: 1 },
+    }],
+    cart:[{
+        productid: { type: mongoose.Schema.Types.ObjectId, ref: 'book' },
+        quantity: { type: Number, default: 1 },
+    }],
    
    
 })
 const user = mongoose.model('user', userSchema);
+
 const productSchema = new Schema({
     code:{
         type:String,
@@ -45,30 +54,42 @@ const productSchema = new Schema({
       
     },
     xs:{
-        type:String,
+        type:Number,
       
     },
     s:{
-        type:String,
+        type:Number,
       
     },
     m:{
-        type:String,
+         type:Number,
       
     },
     l:{
-        type:String,
+         type:Number,
       
     },
    xl:{
-        type:String,
+        type:Number,
       
     },
 })
 const product = mongoose.model('product',productSchema);
 
+const deliveryschema= new mongoose.Schema({
+    user: { type: mongoose.Schema.Types.ObjectId, ref: 'user'},
+    address:{type : String},
+    delivery:[{
+            productid: { type: mongoose.Schema.Types.ObjectId, ref: 'book' },
+            size:{ type: String},
+            quantity: { type: Number, default: 1 },
+    }]
+})
+    const delivery= mongoose.model('orders',deliveryschema)
+
 module.exports = {
     user,
     product,
+    delivery,
 
 };

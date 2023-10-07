@@ -14,27 +14,29 @@
 }
 .productbottom{
     display: flex;
+    
 }
 .product{
     border: 1px black solid;
-    width: 400px;
+    width: 333px;
     height: auto;
 }
 .productimg img{
-    width: 400px;
+    width:  333px;
 }
-/* Define a class to apply the hover effect */
-/* .hover-image:hover {
-    content: url("<%- element.img2 %>");
-    /* Add any other styling you want for the hover effect */
-/* } */ 
-
-/* Reset the image source when not hovering */
-/* .product .productimg img {
-    content: url("https://overlays.co/cdn/shop/files/20230805-DSC03425.jpg?v=1692105105&width=400");
-} */
-
-/* Add a smooth transition effect */
-
-
-     
+/* Remove blue color from anchor tags */
+a {
+    /* Dark gray */
+    text-decoration: none; /* Remove underlines */
+  }
+  
+  /* Style visited links */
+  a:visited {
+    color: #666; /* Slightly lighter gray for visited links */
+  }
+  
+  /* Add a subtle color change on hover */
+  a:hover {
+    color: #007bff; /* Blue on hover */
+  }
+  

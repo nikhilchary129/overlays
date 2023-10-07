@@ -1,0 +1,43 @@
+.productdiv{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+        /* Style the quantity selector container */
+ .quantity-selector {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 120px; /* Adjust the width as needed */
+ }
+ /* Style the decrease button */
+ .quantity-selector__button:first-child {
+     background-color:none; /* Change the background color */
+     color: rgb(0, 0, 0); /* Change the text color */
+     padding: 5px 10px; /* Add padding */
+     border: none;
+     cursor: pointer;
+ }
+ /* Style the input field */
+ .quantity-selector__input {
+     width: 40px; /* Adjust the width as needed */
+     text-align: center;
+     font-size: 16px; /* Adjust the font size as needed */
+     border: 1px solid #ccc; /* Add a border */
+     border-radius: 4px; /* Add some border radius */
+     margin: 0 5px; /* Add spacing between the input and buttons */
+ }
+ /* Style the increase button */
+ .quantity-selector__button:last-child {
+     background-color:none; /* Change the background color */
+     color: black; /* Change the text color */
+     padding: 5px 10px; /* Add padding */
+     border: none;
+     cursor: pointer;
+ }
+ .btn{
+     background-color: transparent;
+     border: 0;
+     width: auto;
+     text-align: center;
+ }

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product</title>
+    <link rel="stylesheet" href="/allproduct.css">
+    <link rel="stylesheet" href="/card.css">
+    <link rel="stylesheet" href="/product.css">
+</head>
+
+<body>
+
+    <div class="productdiv">
+        <div class="imgofproduct">
+            <img src="<%= locals.product.img1 %>" width="425px" height="auto" alt="" srcset="">
+        </div>
+
+        <div class="productdetails">
+            <h1>
+                <%= locals.product.nam %>
+            </h1>
+            <p> ₹ <%= locals.product.price %>.00</p>
+
+            <h1>add to the bag</h1>
+            <form class="productbottom" method="post">
+           
+                <% if (locals.product.xs!=0) { %>
+                    <div class="sizebox">
+                        <a class="size">
+                            <input type="submit" name="size" class="btn" value="xs">
+                        </a>
+                    </div>
+       
+                <% } if (locals.product.s!=0) { %>
+                    <div class="sizebox">
+                        <a class="size">
+                          <input type="submit" name="size"   class="btn" value="s">
+                     </a>
+                 </div>
+               
+                 <% } if (locals.product.m!=0) { %>
+                     <div class="sizebox">
+                         <a class="size">
+                                <input type="submit" name="size"  class="btn" value="m"> 
+                         </a>
+                     </div>
+                     <% } if (locals.product.l!=0) { %>
+                         <div class="sizebox">
+                             <a class="size">
+                                   <input type="submit" name="size" class="btn"  value="l">
+                             </a>
+                          </div>
+                <% } if (locals.product.xl!=0) { %>
+                    <div class="sizebox">
+                        <a class="size">
+                             <input type="submit" name="size" class="btn"  value="xl"> 
+                        </a>
+                    </div>
+                    <% } %>
+
+                
+
+            </form>
+
+        </div>
+    </div>
+    
+</body>
+
+</html>
